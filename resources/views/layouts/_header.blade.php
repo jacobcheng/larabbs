@@ -53,6 +53,7 @@
                 <i class="far fa-user mr-2"></i>
                 个人中心
               </a>
+              <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">编辑资料</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="logout" href="#">
