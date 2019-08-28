@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+//use App\Models\User;
+//use App\Models\Topic;
+
 class Reply extends Model
 {
     protected $fillable = ['content'];
@@ -14,5 +17,10 @@ class Reply extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function scopeRecent($query)
+    {
+        return $query->orderBy('id', 'desc');
     }
 }
